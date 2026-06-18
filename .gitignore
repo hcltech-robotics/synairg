@@ -1,0 +1,62 @@
+__pycache__/
+*.py[cod]
+
+# Python environments and packaging
+.python-version
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Test, lint, and type-check caches
+.coverage
+htmlcov/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# Local configuration
+.env
+.env.*
+
+# Local datasets and generated assets
+.codex_tmp/
+datasets/*
+!datasets/.gitkeep
+external/
+outputs/
+generated/
+artefacts/
+runs/
+logs/
+*.log
+
+# Model checkpoints and experiment outputs
+checkpoints/
+*.ckpt
+*.pt
+*.pth
+*.safetensors
+
+# Medical imaging and derived geometry artefacts
+*.dcm
+*.dicom
+*.nii
+*.nii.gz
+*.nrrd
+*.mha
+*.mhd
+*.mgz
+*.vtk
+*.vti
+*.vtu
+*.stl
+*.obj
+*.ply
+*.usd
+*.usda
+*.usdc

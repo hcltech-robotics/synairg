@@ -1,0 +1,1125 @@
+{
+  "dataset": "BM-BronchoLC",
+  "leakage_checks": {
+    "assigned_image_count": 5212,
+    "assigned_patient_count": 208,
+    "overlaps": [],
+    "patient_overlap": false
+  },
+  "no_cheating_note": "Use train for LoRA/style fitting, validation for architecture-level stopping only, and test for final distributional realism metrics. Do not tune prompts, seeds, control weights, or per-input settings on test.",
+  "root": "datasets/real/bm_broncholc",
+  "schema_version": "1.0",
+  "source": {
+    "citation": "Vu, Van Giap (2023). BM-BronchoLC. figshare. Dataset.",
+    "doi": "10.6084/m9.figshare.24243670.v3",
+    "expected_files": [
+      {
+        "download_url": "https://ndownloader.figshare.com/files/43034527",
+        "md5": "b5be15defd71e5a136ee854e5f3f7b74",
+        "name": "Lung_cancer.zip",
+        "size_bytes": 304836076
+      },
+      {
+        "download_url": "https://ndownloader.figshare.com/files/43034623",
+        "md5": "25b9ca4b1ff568a95a235f2168b2a693",
+        "name": "Non_lung_cancer.zip",
+        "size_bytes": 259951860
+      }
+    ],
+    "figshare_article_id": "24243670",
+    "license": "CC BY 4.0",
+    "url": "https://figshare.com/articles/dataset/BM-BronchoLC/24243670"
+  },
+  "split_policy": {
+    "method": "deterministic_sha256_by_category_and_patient",
+    "salt": "synairg-bm-broncholc-patient-split-v1",
+    "test_fraction": 0.15,
+    "train_fraction": 0.7,
+    "validation_fraction": 0.15
+  },
+  "split_unit": "category/patient_id",
+  "splits": {
+    "test": {
+      "category_image_counts": {
+        "lung_cancer": 414,
+        "non_lung_cancer": 366
+      },
+      "category_patient_counts": {
+        "lung_cancer": 16,
+        "non_lung_cancer": 15
+      },
+      "image_count": 780,
+      "patient_count": 31,
+      "patients": [
+        {
+          "category": "lung_cancer",
+          "image_count": 24,
+          "patient_id": "0d8421ce-4490-4c9c-a1f5-e0babe241b8e"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 52,
+          "patient_id": "185b2e15-1f7a-4176-8f65-117ee1e9db0b"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 2,
+          "patient_id": "1b750a25-ec66-438a-b7e7-fa559fb2aa5d"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 40,
+          "patient_id": "1c72923a-5533-4d85-b6e9-2acd46968ad3"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 38,
+          "patient_id": "1d47b7d8-f095-4259-99e8-eea06af50e2b"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 12,
+          "patient_id": "27dc3b17-399b-4198-b60d-b905118ec79f"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 42,
+          "patient_id": "40db838c-1b1c-4841-91ab-ca4930337b43"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 48,
+          "patient_id": "414c7d05-f0af-41df-be84-9f10254171de"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 2,
+          "patient_id": "4dec07b1-3616-483f-95a1-aced026e7fa3"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 24,
+          "patient_id": "50e338be-fb67-4000-a1d5-0bb2f0aee912"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 28,
+          "patient_id": "58b73065-33f1-42ee-8bbb-1d0fd7684b92"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 16,
+          "patient_id": "62b9da91-adc5-4dfe-90c0-e344e4e9fb8a"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 20,
+          "patient_id": "63266062-6e99-4154-abde-459c051e9df2"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 32,
+          "patient_id": "6c5b36f8-66d3-4d2a-ab35-501eefa884f0"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 28,
+          "patient_id": "6ccd062d-c4b4-4a6b-957b-e62a3c1c02e9"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 24,
+          "patient_id": "79ff38a7-ec26-453c-b4ee-018e429d91e5"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 26,
+          "patient_id": "7ea62e40-32e5-49be-9506-c6dd0d218700"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 34,
+          "patient_id": "848b1e88-c34d-4133-a7dd-743c84781f5b"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 28,
+          "patient_id": "8e6b900d-f866-4a8c-896b-890b4947e399"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 20,
+          "patient_id": "9b0343cb-1877-4e6c-a5cd-c1e58f964de4"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 6,
+          "patient_id": "adb85cfa-5e44-4271-87d3-eec0513fbf4e"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 14,
+          "patient_id": "adde88e5-e09f-4ea6-bf6b-781550424e89"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 4,
+          "patient_id": "b34a1e0c-a32f-4e8b-91e6-39bbc42c8cbe"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 22,
+          "patient_id": "b9706721-d3be-4aad-ad71-c960b9928810"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 38,
+          "patient_id": "c9c4f766-fe16-4c51-8514-72ca8274fb0e"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 20,
+          "patient_id": "cd512163-9e14-42e1-8ec5-c0be65ddf10a"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 26,
+          "patient_id": "e7253d09-4b35-4e05-8ef8-da436209fd6b"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 36,
+          "patient_id": "e79b6cb0-0343-413e-9c89-e6dc3b33730d"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 24,
+          "patient_id": "eb011059-2ddd-40f9-9e2c-62476b7642ea"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 14,
+          "patient_id": "f75d94a0-f677-46b0-a4bf-254e7eef29df"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 36,
+          "patient_id": "fa473580-e12e-438f-a650-8a5ee46443c0"
+        }
+      ]
+    },
+    "train": {
+      "category_image_counts": {
+        "lung_cancer": 1896,
+        "non_lung_cancer": 1736
+      },
+      "category_patient_counts": {
+        "lung_cancer": 74,
+        "non_lung_cancer": 72
+      },
+      "image_count": 3632,
+      "patient_count": 146,
+      "patients": [
+        {
+          "category": "lung_cancer",
+          "image_count": 32,
+          "patient_id": "00fc8290-66a0-4a5b-95ae-05044c5a708a"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 28,
+          "patient_id": "01f61a99-5d84-486c-beda-5c6285ab122e"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 24,
+          "patient_id": "028ee078-68c3-400e-b7f5-aa2a50805f24"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 16,
+          "patient_id": "055df76c-5e8d-4abc-93f1-5d2486bb361f"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 42,
+          "patient_id": "08d7d52b-252f-4fe6-8dcc-3c7e91ca7031"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 24,
+          "patient_id": "0a0b04bb-438a-49d0-831d-d5852b1a475e"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 12,
+          "patient_id": "0ad39005-edcb-42da-962d-b0bfc6715efd"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 12,
+          "patient_id": "0b1d36af-5093-4a37-9271-00421387ebca"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 38,
+          "patient_id": "0c5b20cb-e130-4dd2-8dac-3351f5d4d80c"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 16,
+          "patient_id": "11c390b5-bd4b-4f0b-87a5-fd4217c8aeec"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 38,
+          "patient_id": "14d05616-3cb8-4922-a1d6-245c29b0b3de"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 36,
+          "patient_id": "14f3de65-78c9-45c2-a7a6-e0557a1246d0"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 34,
+          "patient_id": "15fd8704-b975-4def-8e2a-24f1cb879166"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 18,
+          "patient_id": "1913f6eb-2c87-47af-ad8a-e6f0bed95302"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 16,
+          "patient_id": "191aeca5-38ed-46fd-acb8-9886459a0ef7"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 16,
+          "patient_id": "1c1ba5d0-cf4c-4b76-a785-4e7405659da2"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 16,
+          "patient_id": "1c1be138-2769-43ec-ad71-4f402af18b76"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 36,
+          "patient_id": "1ed16623-44a1-4f0d-8c88-49a9bce21884"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 14,
+          "patient_id": "204faa7f-2ee0-453e-98a7-99db8aefd0c3"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 36,
+          "patient_id": "20e5d59f-0ac8-4cf5-9bc8-30dc5130ba79"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 28,
+          "patient_id": "21eb44a6-653e-4769-bc63-bd8e0c8607ca"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 22,
+          "patient_id": "225aeffc-de21-4d12-b1d1-5a42a6c47f3d"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 18,
+          "patient_id": "23cba256-ddf4-48bb-80a9-39ad919d6a2c"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 12,
+          "patient_id": "24c13aeb-154a-474b-a4b7-dcf23370e090"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 26,
+          "patient_id": "268a0d6f-3a35-4848-bb19-3442c4b4c5e5"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 22,
+          "patient_id": "283057da-2b3b-4656-901d-326990614027"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 22,
+          "patient_id": "2bd6d81a-1332-4d88-89b9-e69fc9709ca3"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 28,
+          "patient_id": "2cae0f6d-1ed8-4d80-80fc-950abc3247b5"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 16,
+          "patient_id": "2d1836ad-781c-44ff-b279-490268c49e34"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 24,
+          "patient_id": "2d62189c-5325-41df-8b79-43074bc68217"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 16,
+          "patient_id": "2d66a5fd-02cd-445b-b40d-0bbafc49e332"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 16,
+          "patient_id": "2d7899ae-182e-4530-89b5-fd906ba21ad7"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 56,
+          "patient_id": "302fe826-778c-4268-918c-b39a2fab0426"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 34,
+          "patient_id": "30c3a423-e3ba-4356-9ba9-ef50ab5735ea"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 30,
+          "patient_id": "33117688-8e6a-4a29-9678-2cd0d13e8841"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 28,
+          "patient_id": "3311bd33-f472-4375-8dff-a0efe98a73a9"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 20,
+          "patient_id": "3643ce32-59cc-46f4-818f-47d1e50114e2"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 30,
+          "patient_id": "370a4f99-8897-4990-98c7-efabe54c5825"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 14,
+          "patient_id": "3933be2d-f096-4153-9c9f-e189e8c9b9de"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 28,
+          "patient_id": "3d0cfe94-cfa8-491c-a343-7f60d5155fcc"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 28,
+          "patient_id": "3d1e6e2a-a92f-4417-aa6f-a669cca47a40"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 24,
+          "patient_id": "3e895231-8f70-4b95-8e18-eb6d6afcddf4"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 26,
+          "patient_id": "3eb1f9f4-1921-4bab-a7b9-6f6521cc86cf"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 42,
+          "patient_id": "418deeff-9b54-41e4-ba8b-2118771aa764"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 36,
+          "patient_id": "419f7c33-90f8-439c-a041-8d9e42ed5ba6"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 24,
+          "patient_id": "4860ee4f-d1a6-4fd2-891c-22bd309ade8f"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 30,
+          "patient_id": "4c36d294-8577-4a02-931e-0c2be30064d5"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 28,
+          "patient_id": "4eaa37ea-1d5a-4f32-9128-5838821c49c2"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 14,
+          "patient_id": "4f7dd582-247b-47f2-9831-6b3cd4cef80e"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 16,
+          "patient_id": "4f816c4d-22ce-4d0a-abb2-6750b7d33fa6"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 24,
+          "patient_id": "4fdeff82-0e38-4b39-8026-369b68aa678b"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 12,
+          "patient_id": "512f70ab-8f6f-4374-8209-879bd6191e54"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 54,
+          "patient_id": "533a8be2-5ddb-443b-bc1a-fe1eb4d35c13"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 10,
+          "patient_id": "5c929344-cdc2-4ee0-aca3-e12aaee4c73c"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 22,
+          "patient_id": "5cce9f89-a05d-4ded-b0e5-e135711400d8"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 4,
+          "patient_id": "5cda369f-8071-48b7-9dde-f70969972fad"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 18,
+          "patient_id": "5db29636-287b-4547-8bc7-ba69243c188b"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 26,
+          "patient_id": "60e13e11-54ac-4800-a4c4-34b7651082f0"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 30,
+          "patient_id": "61f60771-7aad-405a-91c9-da835c293e2e"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 6,
+          "patient_id": "6353c874-0fcc-4e61-8ed7-7ab9fdfab7d8"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 24,
+          "patient_id": "65317f7c-38e7-4ff8-87f3-7297a7bfd17e"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 26,
+          "patient_id": "6895d792-0973-4490-9d78-fa232471b448"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 32,
+          "patient_id": "68ace47e-1da5-484f-ba00-5116de0e69ab"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 22,
+          "patient_id": "68f54824-4f61-4e2a-81ba-40737ab64deb"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 10,
+          "patient_id": "6bab7a7a-83d1-488b-8c55-8a9b63ff7888"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 12,
+          "patient_id": "6be8263f-0359-424a-94e6-9430cb6bff95"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 38,
+          "patient_id": "6cd83bad-0db7-443f-847a-27813eb91e9e"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 8,
+          "patient_id": "6e2f1bf6-840b-484a-afff-4ad413806c70"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 24,
+          "patient_id": "6f04b70c-32e0-4643-af48-4f03c25c261b"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 8,
+          "patient_id": "6f85a69d-882d-4ba0-b135-0b167b2320b6"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 44,
+          "patient_id": "702d57c1-f8ab-4a17-9f6c-9c85607c80dd"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 30,
+          "patient_id": "70c25bd8-eded-49c3-a350-c9fd2cb29d15"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 36,
+          "patient_id": "76a736eb-3e04-4204-b5d7-a230ff310958"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 8,
+          "patient_id": "779c9942-1936-45d6-8075-ba1e013271ff"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 12,
+          "patient_id": "7a384784-8f3a-4fcf-84f7-ec98de45594e"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 26,
+          "patient_id": "7bc6845c-d127-497d-ab84-099c302c3a66"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 18,
+          "patient_id": "7fccebc0-d33a-4e3d-9e20-8bc971c059d4"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 8,
+          "patient_id": "80be6a42-36e1-4f5a-b100-1a813edcc44b"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 18,
+          "patient_id": "820f38a5-b599-4df4-8423-eba728ac6a09"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 40,
+          "patient_id": "85fb3223-8198-4674-b63d-7763d69070a7"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 32,
+          "patient_id": "8742bfac-2380-44b7-93b5-8a60e179bdaf"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 38,
+          "patient_id": "881d26b1-2f19-4939-bfe1-875323ce8ee5"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 34,
+          "patient_id": "8dd50c4c-e721-4a36-90d8-dfcb8d8e8f4f"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 22,
+          "patient_id": "8e6347bf-f31f-4327-b74f-ef1756be11b0"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 52,
+          "patient_id": "928aaa2e-c66f-45a8-8631-ab89d73b828e"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 42,
+          "patient_id": "92cb92fa-3f2d-4a42-a2de-b8f431be335a"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 10,
+          "patient_id": "93bbaa2f-4a1a-43ef-b8e9-642a1eec309e"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 12,
+          "patient_id": "97f11438-5eac-4c02-be5f-b257d6811ccf"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 24,
+          "patient_id": "99c44267-b537-431c-8d70-530c396026b3"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 28,
+          "patient_id": "9a097e67-e2f6-4ff2-8f88-1bf87c702139"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 30,
+          "patient_id": "9c2e3942-3332-410b-b123-7e6ca42e762d"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 32,
+          "patient_id": "9f3cb324-3a8a-4991-8f82-fc819aac0c44"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 38,
+          "patient_id": "9fb0b462-92cb-47fb-8810-13b9451733c8"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 36,
+          "patient_id": "a0de7b6d-4196-4984-a123-86c1da783b61"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 36,
+          "patient_id": "a1346093-b717-4333-a60d-5383a2fd690c"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 48,
+          "patient_id": "a6f14f51-7ae3-46da-9fd7-bd6a998dec8a"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 14,
+          "patient_id": "a84db913-8113-460a-a7be-57b32546915c"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 20,
+          "patient_id": "a8ab3da3-1764-4dc5-b229-fe594fb19531"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 36,
+          "patient_id": "aabdbd30-6062-4532-beff-e1f3bbd15099"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 18,
+          "patient_id": "b05121b4-9231-4605-9f61-31d12beca3ef"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 38,
+          "patient_id": "b3506f35-b5b9-4997-b68f-a3bdc56dc8a3"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 26,
+          "patient_id": "b4a1caab-336b-4758-95ec-f6fe7b8ec4ae"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 22,
+          "patient_id": "b4ba4a58-1be7-4480-9513-1d525030d35c"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 28,
+          "patient_id": "b4f3ec07-a87b-41ec-a63c-3ed5351d5607"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 32,
+          "patient_id": "b6204945-d74c-48f1-b813-577b692e9ef0"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 14,
+          "patient_id": "b8e14844-d348-4db9-80c5-4b8798b8f1ce"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 8,
+          "patient_id": "bae590d2-6c5f-428f-947c-2a056268ab24"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 20,
+          "patient_id": "bca0809c-da76-4c19-ad5a-3ba73806f0dd"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 4,
+          "patient_id": "bddd80d4-f474-4423-881c-a6d901b311e7"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 30,
+          "patient_id": "be6cc341-b537-4ba1-aa2f-412d66fad969"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 18,
+          "patient_id": "beb2c555-5d7a-44fa-9a89-84ee79753347"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 32,
+          "patient_id": "bfcb557b-e008-47b0-b631-7f9001b6cda8"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 40,
+          "patient_id": "c13daff9-11a9-410d-acf5-a9d2917d8544"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 26,
+          "patient_id": "c2e7f093-5720-453a-a35d-c08f8afd18ed"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 20,
+          "patient_id": "c4940c72-86c7-48f7-93ea-20d7f26d1e26"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 36,
+          "patient_id": "c4fc6aa3-dd83-4078-8dd8-142f8a361b67"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 30,
+          "patient_id": "c528e601-d9e7-4064-81e7-f41ad1c26f74"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 52,
+          "patient_id": "c61dbccf-0797-4823-be88-250306d138b3"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 12,
+          "patient_id": "c83a9d46-8b6f-4a05-994b-03e8393a2620"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 36,
+          "patient_id": "c90ce2df-6d1e-41ca-afc4-432c1e4c22f5"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 26,
+          "patient_id": "cf2f209a-cb7e-45ca-a894-178b73e319f2"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 24,
+          "patient_id": "cfa439a4-71ee-4d1e-bcd6-f5dc5873dab6"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 18,
+          "patient_id": "cff50ca5-bd16-43b5-81b9-fd34ff6fbb51"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 22,
+          "patient_id": "d152a428-9a71-40eb-bd26-1777be84f866"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 36,
+          "patient_id": "d478e0af-ffdb-451e-b29f-038cf9cfd576"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 16,
+          "patient_id": "d4f7d24f-f94a-4ff0-9f99-7a2931caa439"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 24,
+          "patient_id": "d5b1a71b-a0d0-407e-840b-f4fd42b3e3cd"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 2,
+          "patient_id": "d6ecaa96-97ba-4b33-96eb-1106f4c25ac7"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 32,
+          "patient_id": "d8725048-ec7c-4bae-ad02-6478822f0b27"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 32,
+          "patient_id": "d9fb72d8-8cd3-427e-98e2-5492a447eacb"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 34,
+          "patient_id": "dd199b2b-b334-446b-852b-c94522fc2787"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 36,
+          "patient_id": "e008b0ea-4ab6-4e29-83e0-0f994824f35e"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 12,
+          "patient_id": "e6b3e73e-a069-478f-8c69-9f44931a2e09"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 28,
+          "patient_id": "e81b26a8-fd5d-4c73-ab07-f0ded74e4591"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 16,
+          "patient_id": "e941ff23-026d-42b1-900b-66ba92b266aa"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 18,
+          "patient_id": "e99e6b38-08e8-4384-8276-6462980e2423"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 8,
+          "patient_id": "ec4015a9-57c1-4a3c-b218-ca00ec24cf7e"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 16,
+          "patient_id": "ee079237-3a92-43f0-933a-34bca695e0e5"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 22,
+          "patient_id": "ee423097-d87a-486c-8c1a-46ee38f11079"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 36,
+          "patient_id": "f1e77742-ad28-4a49-9316-4e3691d60c94"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 28,
+          "patient_id": "f4e95751-5451-4ef5-8eab-6105ed43c988"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 24,
+          "patient_id": "fac94eb5-eac1-4b07-9774-17affc9a42c6"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 30,
+          "patient_id": "fb90dc6b-dbb4-4cf2-a2e8-25655de5ffca"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 16,
+          "patient_id": "fd19d02e-8202-496f-8640-fa0e9c7f6aef"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 28,
+          "patient_id": "fd380b65-dca0-408e-b011-8a21628f23fe"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 10,
+          "patient_id": "fde1b8b0-95e8-472e-9cd3-a7e248a2a2a6"
+        }
+      ]
+    },
+    "validation": {
+      "category_image_counts": {
+        "lung_cancer": 386,
+        "non_lung_cancer": 414
+      },
+      "category_patient_counts": {
+        "lung_cancer": 16,
+        "non_lung_cancer": 15
+      },
+      "image_count": 800,
+      "patient_count": 31,
+      "patients": [
+        {
+          "category": "lung_cancer",
+          "image_count": 44,
+          "patient_id": "00dd8f02-3e56-43e5-a584-e4138063ccf0"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 26,
+          "patient_id": "0e3b6e11-34e8-475f-880e-361b7f7b298d"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 30,
+          "patient_id": "0edf2a90-21cd-4c8b-901e-e26b78a52d7c"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 16,
+          "patient_id": "10587912-8b1c-4343-87a1-f0337ec0c98b"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 34,
+          "patient_id": "1a8f0937-701f-46d2-819d-a7d663702b23"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 14,
+          "patient_id": "2002d3c8-1a6d-47de-b92a-84f0143e35bb"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 54,
+          "patient_id": "2865645c-7248-4f79-b339-e0711e0d67c3"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 10,
+          "patient_id": "36cbdf17-9051-4f0c-aac9-fb5db56af69f"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 8,
+          "patient_id": "41febed2-ac62-419e-abbc-fd5d859fbc06"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 24,
+          "patient_id": "45c7d244-0dc7-4523-8983-1d146a81d025"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 44,
+          "patient_id": "59b750ce-6cdc-489a-a802-348f664ca633"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 20,
+          "patient_id": "66f3e48b-34db-4bfc-99ac-41e3be212f24"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 30,
+          "patient_id": "7487da9e-8892-4201-994e-2ea79418c941"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 14,
+          "patient_id": "78be60f8-2537-4a82-b0c0-f807e90d86ca"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 36,
+          "patient_id": "8636b055-1c36-4afa-9ddf-84b31784a969"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 42,
+          "patient_id": "86660b8c-c9ff-4e1b-9a4a-73bdfa832eb6"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 16,
+          "patient_id": "a0394bb1-d8f1-421a-82a4-274f75c23bf1"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 22,
+          "patient_id": "a0cb6f08-3b0b-4c61-a613-6a192fd610a6"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 22,
+          "patient_id": "a815cb50-d633-4425-8d4b-76c7642baff5"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 30,
+          "patient_id": "a983ebb4-d807-4cd1-b3d9-17a48b09a72f"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 14,
+          "patient_id": "b726e4f1-1239-4744-8e9a-4243753f3260"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 24,
+          "patient_id": "b76febfa-0686-44e2-b3f4-b828cd1d305c"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 36,
+          "patient_id": "bb054bf4-856f-4aba-8445-4adef3f04c91"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 24,
+          "patient_id": "bb22c591-1be4-4de8-9c0a-c11bb16e49a9"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 14,
+          "patient_id": "c14f6d07-4a6f-47e3-b622-92d7ccb852c2"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 22,
+          "patient_id": "c1d9188e-8a9c-45dd-90a8-82b5d491bc2e"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 12,
+          "patient_id": "ca46c1f1-235a-4463-a400-ca961c3e3914"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 6,
+          "patient_id": "e7d30f82-92f2-4d8e-8597-243e307a27a9"
+        },
+        {
+          "category": "lung_cancer",
+          "image_count": 30,
+          "patient_id": "f3c8e96b-e260-4c09-b11a-046c24b667a3"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 66,
+          "patient_id": "fd25e171-435e-4910-a271-15ec3b41d5ca"
+        },
+        {
+          "category": "non_lung_cancer",
+          "image_count": 16,
+          "patient_id": "fe8dfb12-8d99-4a57-a18c-3aa3295051b9"
+        }
+      ]
+    }
+  }
+}

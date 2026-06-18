@@ -1,0 +1,11 @@
+{
+  "_comment": "Postprocess for MAISI from-mask thoracic airway CTs: make the labelled airway lumen air-like and suppress source-mask background air before external airway segmentation.",
+  "ct_path": ".codex_tmp/nv_generate_thoracic_frommask_sanitized_run/thoracic_airway_source_mask_20260612_170627_846484_image.nii.gz",
+  "source_mask_path": ".codex_tmp/nv_generate_thoracic_frommask_run/thoracic_airway_source_mask.nii.gz",
+  "output_path": ".codex_tmp/nv_generate_thoracic_frommask_sanitized_run/thoracic_airway_source_mask_20260612_170627_846484_image_airway_trachea_hu_corrected.nii.gz",
+  "airway_labels": [57, 132],
+  "airway_hu": -1000.0,
+  "halo_hu": -750.0,
+  "outside_body_hu": 0.0,
+  "halo_iterations": 1
+}

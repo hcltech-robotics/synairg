@@ -1,0 +1,27 @@
+{
+  "case_id": "thoracic-airway-frommask-seed12",
+  "backend": {
+    "type": "nv-generate-ct",
+    "name": "nv-generate-ct-rflow-thoracic-airway",
+    "infer_config_path": "maisi_thoracic_airway_from_mask.json",
+    "command": [
+      "python3",
+      "../tools/generation/run_rflow_ct_from_env.py",
+      "{infer_config_path}",
+      "--output-dir",
+      "{backend_output_dir}",
+      "--random-seed",
+      "{random_seed}",
+      "--version",
+      "{version}",
+      "--yes"
+    ],
+    "random_seed": 12,
+    "version": "rflow-ct",
+    "timeout_seconds": 7200
+  },
+  "metadata": {
+    "intent": "Thoracic CT generation tuned for airway mesh extraction: use a prepared thoracic-only MAISI source mask with airway/lung lobes/heart/thoracic envelope and abdominal labels removed.",
+    "mesh_gen_issue": 5
+  }
+}

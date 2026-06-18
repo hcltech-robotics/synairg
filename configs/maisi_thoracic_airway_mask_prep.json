@@ -1,0 +1,8 @@
+{
+  "_comment": "Prepare the issue-5 image-from-mask source as a thoracic airway case: retain airway, lung lobes, heart, thoracic spine/ribs/vessels, replace abdominal organs with body envelope, and zero the inferior body outside the lung-derived thoracic crop.",
+  "source_mask_path": "/home/chrisvoncsefalvay/nv-generate-ctmr/datasets/all_masks_flexible_size_and_spacing_4000/Task06/labelsTr/lung_020_133combined_aug_wbdm.nii.gz",
+  "output_mask_path": "../.codex_tmp/nv_generate_thoracic_frommask_run/thoracic_airway_source_mask.nii.gz",
+  "slice_axis": 2,
+  "inferior_margin_slices": 0,
+  "superior_margin_slices": 8
+}

@@ -1,0 +1,53 @@
+[package]
+description = "SynAirG MDL/RTX render-only Isaac Kit experience"
+title = "SynAirG MDL Render"
+version = "1.0.0"
+keywords = ["experience", "app", "usd", "mdl", "rtx", "synairg"]
+
+[dependencies]
+"isaacsim.simulation_app" = {}
+"omni.kit.pip_archive" = {}
+"omni.usd" = {}
+"omni.kit.usd.mdl" = {}
+"omni.hydra.engine.stats" = {}
+"omni.hydra.rtx" = {}
+"omni.hydra.usdrt_delegate" = {}
+"omni.kit.renderer.capture" = {}
+"omni.kit.renderer.core" = {}
+"omni.kit.viewport.utility" = {}
+"omni.kit.viewport.window" = {}
+"omni.replicator.core" = {}
+"omni.syntheticdata" = {}
+
+[settings]
+renderer.asyncInit = true
+renderer.gpuEnumeration.glInterop.enabled = false
+rtx.hydra.mdlMaterialWarmup = true
+rtx.materialDb.syncLoads = true
+rtx.hydra.materialSyncLoads = true
+omni.replicator.asyncRendering = false
+app.settings.fabricStageFrameHistoryCount = 3
+app.settings.fabricDefaultStageFrameHistoryCount = 3
+app.viewport.createCameraModelRep = false
+exts."omni.kit.renderer.core".present.enabled = false
+exts."omni.usd".locking.onClose = false
+
+[settings.app]
+name = "SynAirG MDL Render"
+version = "1.0.0"
+content.emptyStageOnStart = true
+fastShutdown = true
+file.ignoreUnsavedOnExit = true
+gatherRenderResults = true
+settings.persistent = false
+vulkan = true
+window.title = "SynAirG MDL Render"
+
+[settings.app.exts.folders]
+'++' = [
+    "${app}",
+    "${app}/../exts",
+    "${app}/../extscache",
+    "${app}/../extsUser",
+    "${app}/../extsDeprecated",
+]

@@ -1,0 +1,141 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "synairg"
+version = "0.1.0"
+description = "Synthetic intraluminal airway generation and rendering engine."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [
+  { name = "Chris von Csefalvay" },
+]
+dependencies = [
+  "imageio>=2.34",
+  "imageio-ffmpeg>=0.5",
+  "nibabel>=5.2",
+  "numpy>=1.24",
+  "Pillow>=10.0",
+  "pyarrow>=15",
+  "pydicom>=2.4",
+  "pyvista>=0.43",
+  "PyYAML>=6.0",
+  "rich>=13.7",
+  "scipy>=1.11",
+  "scikit-image>=0.22",
+  "typer>=0.12",
+]
+
+[project.optional-dependencies]
+dev = [
+  "mypy>=1.10",
+  "pytest>=8.2",
+  "ruff>=0.5",
+]
+
+[project.scripts]
+synairg = "synairg_core.cli:main"
+
+[tool.setuptools.packages.find]
+where = [
+  "libs/synairg_core",
+  "packages/mesh_gen",
+  "packages/pose_gen",
+  "packages/trainer",
+  "packages/video_gen",
+  "packages/volume_gen",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [
+  "libs/synairg_core",
+  "packages/mesh_gen",
+  "packages/pose_gen",
+  "packages/trainer",
+  "packages/video_gen",
+  "packages/volume_gen",
+  "tools",
+]
+markers = [
+  "integration: tests that invoke external real backends or services",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["B", "E", "F", "I", "UP"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+mypy_path = [
+  "libs/synairg_core",
+  "packages/mesh_gen",
+  "packages/pose_gen",
+  "packages/trainer",
+  "packages/video_gen",
+  "packages/volume_gen",
+]
+files = [
+  "libs",
+  "packages",
+  "tools",
+]
+
+[[tool.mypy.overrides]]
+module = [
+  "carb",
+  "carb.*",
+  "isaacsim",
+  "networks.*",
+  "omni",
+  "omni.*",
+  "pxr",
+  "pxr.*",
+  "scipy",
+  "scipy.*",
+  "torch",
+  "torch.*",
+  "yaml",
+]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = [
+  "connectivity_aware_airway",
+  "enforce_thoracic_airway_hu",
+  "evaluate_airway_mask",
+  "generation.*",
+  "mesh_gen.preview",
+  "mesh_gen.qa",
+  "mesh_gen.segmentation",
+  "mesh_gen.viewer",
+  "pose_gen.paths",
+  "prepare_thoracic_airway_mask",
+  "render_omniverse_mdl_bundle",
+  "run_rflow_ct_from_env",
+  "segmenters.*",
+  "tools.*",
+  "video_gen.cli",
+  "video_gen.scope",
+]
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+module = [
+  "skimage",
+  "skimage.*",
+  "tifffile",
+  "tifffile.*",
+]
+follow_imports = "skip"
+ignore_missing_imports = true

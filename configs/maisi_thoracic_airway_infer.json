@@ -1,0 +1,36 @@
+{
+  "anatomy_list": [
+    "airway",
+    "left lung upper lobe",
+    "left lung lower lobe",
+    "right lung upper lobe",
+    "right lung middle lobe",
+    "right lung lower lobe",
+    "heart"
+  ],
+  "body_region": [
+    "chest"
+  ],
+  "num_output_samples": 1,
+  "output_size": [
+    384,
+    384,
+    256
+  ],
+  "spacing": [
+    1.0,
+    1.0,
+    1.25
+  ],
+  "controllable_anatomy_size": [],
+  "num_inference_steps": 30,
+  "mask_generation_num_inference_steps": 1000,
+  "image_output_ext": ".nii.gz",
+  "label_output_ext": ".nii.gz",
+  "autoencoder_sliding_window_infer_size": [
+    64,
+    64,
+    64
+  ],
+  "autoencoder_sliding_window_infer_overlap": 0.5
+}

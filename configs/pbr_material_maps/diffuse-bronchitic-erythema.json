@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "name": "diffuse-bronchitic-erythema",
+  "description": "Authorable PBR overlay for diffuse bronchitic redness, vascular irritation, and small petechiae concentrated around main and segmental bronchi.",
+  "regions": [
+    {
+      "name": "global bronchitic blush",
+      "regions": ["all"],
+      "channels": {
+        "erythema": 0.08,
+        "vascularity": 0.04,
+        "wetness": 0.03,
+        "bump_height": 0.03
+      },
+      "albedo_delta_rgb": [16, -6, -8]
+    },
+    {
+      "name": "main bronchus inflamed wash",
+      "regions": ["main_bronchus"],
+      "channels": {
+        "erythema": 0.34,
+        "petechiae": 0.04,
+        "vascularity": 0.12,
+        "wetness": 0.06,
+        "roughness": -0.03,
+        "bump_height": 0.08,
+        "displacement_height": 0.03
+      },
+      "albedo_delta_rgb": [42, -18, -20]
+    },
+    {
+      "name": "segmental inflamed wash",
+      "regions": ["lobar_or_segmental_bronchus"],
+      "channels": {
+        "erythema": 0.28,
+        "petechiae": 0.06,
+        "vascularity": 0.1,
+        "wetness": 0.08,
+        "bump_height": 0.07
+      },
+      "albedo_delta_rgb": [34, -14, -16]
+    }
+  ],
+  "spots": [
+    {
+      "name": "anterior erythema flare",
+      "center_normalized_xyz": [-0.12, 0.12, -0.02],
+      "radius": 0.22,
+      "regions": ["main_bronchus", "lobar_or_segmental_bronchus"],
+      "channels": {
+        "erythema": 0.5,
+        "petechiae": 0.08,
+        "vascularity": 0.14,
+        "specular": 0.06,
+        "bump_height": 0.1,
+        "displacement_height": 0.04
+      },
+      "albedo_delta_rgb": [64, -30, -30]
+    },
+    {
+      "name": "distal punctate irritation",
+      "center_normalized_xyz": [0.26, -0.02, 0.24],
+      "radius": 0.2,
+      "regions": ["distal_airway"],
+      "channels": {
+        "erythema": 0.24,
+        "petechiae": 0.12,
+        "vascularity": 0.1,
+        "bump_height": 0.12
+      },
+      "albedo_delta_rgb": [35, -22, -18]
+    }
+  ]
+}

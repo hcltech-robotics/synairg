@@ -1,0 +1,170 @@
+{
+  "archives": [
+    {
+      "expected_md5": "b5be15defd71e5a136ee854e5f3f7b74",
+      "expected_size_bytes": 304836076,
+      "md5": "b5be15defd71e5a136ee854e5f3f7b74",
+      "name": "Lung_cancer.zip",
+      "path": "datasets/real/bm_broncholc/raw/Lung_cancer.zip",
+      "present": true,
+      "size_bytes": 304836076,
+      "verified": true
+    },
+    {
+      "expected_md5": "25b9ca4b1ff568a95a235f2168b2a693",
+      "expected_size_bytes": 259951860,
+      "md5": "25b9ca4b1ff568a95a235f2168b2a693",
+      "name": "Non_lung_cancer.zip",
+      "path": "datasets/real/bm_broncholc/raw/Non_lung_cancer.zip",
+      "present": true,
+      "size_bytes": 259951860,
+      "verified": true
+    }
+  ],
+  "dataset": "BM-BronchoLC",
+  "image_summary": {
+    "categories": {
+      "lung_cancer": {
+        "image_count": 2696,
+        "metadata_files": [
+          "Lung_cancer/annotation.json",
+          "Lung_cancer/labels.json",
+          "Lung_cancer/objects.json"
+        ],
+        "patient_count": 106,
+        "sample_dimensions": [
+          {
+            "height": 480,
+            "path": "Lung_cancer/imgs/00dd8f02-3e56-43e5-a584-e4138063ccf0/5286dd59-75b5-461d-a280-da5482c0de18/004e3a22-bc7f-4ced-88b5-f12488e63405.png",
+            "width": 480
+          },
+          {
+            "height": 480,
+            "path": "Lung_cancer/imgs/00dd8f02-3e56-43e5-a584-e4138063ccf0/5286dd59-75b5-461d-a280-da5482c0de18/0ae93cda-535b-4ad3-ae9e-191384add4f8.png",
+            "width": 480
+          },
+          {
+            "height": 480,
+            "path": "Lung_cancer/imgs/00dd8f02-3e56-43e5-a584-e4138063ccf0/5286dd59-75b5-461d-a280-da5482c0de18/13eb2c9e-798b-406d-b053-45d1280f3327.png",
+            "width": 480
+          },
+          {
+            "height": 480,
+            "path": "Lung_cancer/imgs/00dd8f02-3e56-43e5-a584-e4138063ccf0/5286dd59-75b5-461d-a280-da5482c0de18/2dbf7d66-86e3-4aa4-acb5-3b4fca1656fc.png",
+            "width": 480
+          },
+          {
+            "height": 480,
+            "path": "Lung_cancer/imgs/00dd8f02-3e56-43e5-a584-e4138063ccf0/5286dd59-75b5-461d-a280-da5482c0de18/3139e0be-67f9-42f0-a9c6-d09ae1c711bf.png",
+            "width": 480
+          },
+          {
+            "height": 480,
+            "path": "Lung_cancer/imgs/00dd8f02-3e56-43e5-a584-e4138063ccf0/5286dd59-75b5-461d-a280-da5482c0de18/357acc92-8b51-4481-af36-e38d969fe0d8.png",
+            "width": 480
+          },
+          {
+            "height": 480,
+            "path": "Lung_cancer/imgs/00dd8f02-3e56-43e5-a584-e4138063ccf0/5286dd59-75b5-461d-a280-da5482c0de18/43888b8f-167e-4088-9188-d335f2772496.png",
+            "width": 480
+          },
+          {
+            "height": 480,
+            "path": "Lung_cancer/imgs/00dd8f02-3e56-43e5-a584-e4138063ccf0/5286dd59-75b5-461d-a280-da5482c0de18/44c139fe-3dd4-40c8-85fa-8b9d59c41032.png",
+            "width": 480
+          }
+        ],
+        "video_count": 106
+      },
+      "non_lung_cancer": {
+        "image_count": 2516,
+        "metadata_files": [
+          "Non_lung_cancer/annotation.json",
+          "Non_lung_cancer/labels.json",
+          "Non_lung_cancer/objects.json"
+        ],
+        "patient_count": 102,
+        "sample_dimensions": [
+          {
+            "height": 480,
+            "path": "Non_lung_cancer/imgs/028ee078-68c3-400e-b7f5-aa2a50805f24/3dfbe232-049a-482e-9f7a-1a3ffccae90a/0173496d-02e5-461d-b259-f99d85441f3f.png",
+            "width": 480
+          },
+          {
+            "height": 480,
+            "path": "Non_lung_cancer/imgs/028ee078-68c3-400e-b7f5-aa2a50805f24/3dfbe232-049a-482e-9f7a-1a3ffccae90a/13318412-7bf8-4b8f-8fd4-a9cd98fb6351.png",
+            "width": 480
+          },
+          {
+            "height": 480,
+            "path": "Non_lung_cancer/imgs/028ee078-68c3-400e-b7f5-aa2a50805f24/3dfbe232-049a-482e-9f7a-1a3ffccae90a/22432d84-9aa1-43df-87cf-bc219de206da.png",
+            "width": 480
+          },
+          {
+            "height": 480,
+            "path": "Non_lung_cancer/imgs/028ee078-68c3-400e-b7f5-aa2a50805f24/3dfbe232-049a-482e-9f7a-1a3ffccae90a/2a243f4e-81c9-4cd2-8388-0f320b1f43c7.png",
+            "width": 480
+          },
+          {
+            "height": 480,
+            "path": "Non_lung_cancer/imgs/028ee078-68c3-400e-b7f5-aa2a50805f24/3dfbe232-049a-482e-9f7a-1a3ffccae90a/2bba2c9c-9afa-4304-bd57-60d7c35e8f7e.png",
+            "width": 480
+          },
+          {
+            "height": 480,
+            "path": "Non_lung_cancer/imgs/028ee078-68c3-400e-b7f5-aa2a50805f24/3dfbe232-049a-482e-9f7a-1a3ffccae90a/530746c2-ef91-493c-b3e4-835b95383a0c.png",
+            "width": 480
+          },
+          {
+            "height": 480,
+            "path": "Non_lung_cancer/imgs/028ee078-68c3-400e-b7f5-aa2a50805f24/3dfbe232-049a-482e-9f7a-1a3ffccae90a/6ba44c2a-db19-48e4-a171-83ea08db2731.png",
+            "width": 480
+          },
+          {
+            "height": 480,
+            "path": "Non_lung_cancer/imgs/028ee078-68c3-400e-b7f5-aa2a50805f24/3dfbe232-049a-482e-9f7a-1a3ffccae90a/8459a564-1c11-4c8f-bd30-bebe9ef81731.png",
+            "width": 480
+          }
+        ],
+        "video_count": 102
+      }
+    },
+    "extension_counts": {
+      ".png": 5212
+    },
+    "total_images": 5212
+  },
+  "research_use": {
+    "limitations": [
+      "sampled still frames at one frame per second, not dense video",
+      "no metric depth, normals, optical flow, or camera pose",
+      "labels are diagnostic annotations and must not become paired generation targets"
+    ],
+    "no_cheating_note": "Use patient/video-level splits. Held-out images may be used for distributional metrics only, not per-input RGB supervision or input-specific prompt/control tuning.",
+    "recommended_role": "real clinical appearance corpus for LoRA/style adaptation and held-out distributional realism metrics"
+  },
+  "root": "datasets/real/bm_broncholc",
+  "scan_root": "datasets/real/bm_broncholc/extracted",
+  "schema_version": "1.0",
+  "source": {
+    "citation": "Vu, Van Giap (2023). BM-BronchoLC. figshare. Dataset.",
+    "doi": "10.6084/m9.figshare.24243670.v3",
+    "expected_files": [
+      {
+        "download_url": "https://ndownloader.figshare.com/files/43034527",
+        "md5": "b5be15defd71e5a136ee854e5f3f7b74",
+        "name": "Lung_cancer.zip",
+        "size_bytes": 304836076
+      },
+      {
+        "download_url": "https://ndownloader.figshare.com/files/43034623",
+        "md5": "25b9ca4b1ff568a95a235f2168b2a693",
+        "name": "Non_lung_cancer.zip",
+        "size_bytes": 259951860
+      }
+    ],
+    "figshare_article_id": "24243670",
+    "license": "CC BY 4.0",
+    "url": "https://figshare.com/articles/dataset/BM-BronchoLC/24243670"
+  }
+}

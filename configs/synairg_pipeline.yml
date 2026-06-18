@@ -1,0 +1,41 @@
+schema_version: "1.0"
+case_id: airway-case-001
+output_root: datasets
+
+volume:
+  kind: maisi
+  config: configs/maisi_thoracic_airway_case.json
+
+mask_source:
+  kind: maisi_label
+  mask_path: datasets/volumes/airway-case-001/airway_mask.nii.gz
+  labels: [57, 132]
+
+mesh:
+  case_id: airway-case-001-highdetail
+  refinement_preset: high-detail
+  normal_orientation: inward
+  strict_airway_validation: true
+
+pose:
+  path_count: 3
+  include_procedure: true
+  bronchoscope_profile: diagnostic-p190
+
+render:
+  condition_modalities: [rgb, depth, normal, pps, mask]
+  material_variant: healthy
+  material_map: configs/pbr_material_maps/secretions-thin-clear.json
+  mdl_shader_target: omnipbr-clearcoat
+  final_renderer: omniverse_rtx
+
+rl:
+  task: intraluminal-navigation
+  physiological_bounds:
+    min_accessible_diameter_mm: 3.0
+    max_accessible_depth_mm: 600.0
+  domain_randomisation:
+    camera_fps: [15, 30]
+    mucosal_wetness: [0.35, 0.85]
+    erythema: [0.0, 0.45]
+    secretion_load: [0.0, 0.65]

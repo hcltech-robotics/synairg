@@ -1,0 +1,102 @@
+{
+  "schema_version": "1.0",
+  "name": "smoker-tar-debris",
+  "description": "Authorable PBR overlay for smoke staining, duller mucosa, and softly feathered tar-like debris washes in proximal and main bronchi.",
+  "regions": [
+    {
+      "name": "global smoke cast",
+      "regions": ["all"],
+      "opacity": 0.82,
+      "texture_noise_strength": 0.12,
+      "texture_noise_scale": 2.2,
+      "channels": {
+        "stain": 0.07,
+        "roughness": 0.05,
+        "specular": -0.04,
+        "wetness": -0.03,
+        "mucus_shininess": -0.03,
+        "bump_height": 0.03
+      },
+      "albedo_delta_rgb": [-9, -6, -7]
+    },
+    {
+      "name": "proximal smoke stain wash",
+      "regions": ["tracheal_or_proximal_airway"],
+      "edge_softness": 0.65,
+      "opacity": 0.72,
+      "texture_noise_strength": 0.18,
+      "texture_noise_scale": 2.0,
+      "channels": {
+        "stain": 0.16,
+        "roughness": 0.07,
+        "specular": -0.06,
+        "wetness": -0.05,
+        "vascularity": -0.03,
+        "mucus_shininess": -0.05,
+        "bump_height": 0.04,
+        "displacement_height": 0.02
+      },
+      "albedo_delta_rgb": [-9, -6, -8]
+    },
+    {
+      "name": "main bronchus smoke stain wash",
+      "regions": ["main_bronchus"],
+      "edge_softness": 0.58,
+      "opacity": 0.68,
+      "texture_noise_strength": 0.16,
+      "texture_noise_scale": 2.4,
+      "channels": {
+        "stain": 0.14,
+        "roughness": 0.06,
+        "specular": -0.05,
+        "wetness": -0.04,
+        "mucus_shininess": -0.04,
+        "bump_height": 0.035,
+        "displacement_height": 0.02
+      },
+      "albedo_delta_rgb": [-8, -5, -7]
+    }
+  ],
+  "spots": [
+    {
+      "name": "soft tar wash left wall",
+      "center_normalized_xyz": [-0.22, -0.12, -0.18],
+      "radius": 0.34,
+      "falloff": 1.7,
+      "regions": ["tracheal_or_proximal_airway", "main_bronchus"],
+      "edge_softness": 0.55,
+      "opacity": 0.62,
+      "texture_noise_strength": 0.22,
+      "texture_noise_scale": 2.8,
+      "channels": {
+        "stain": 0.20,
+        "roughness": 0.07,
+        "specular": -0.06,
+        "wetness": -0.05,
+        "mucus_shininess": -0.05,
+        "bump_height": 0.045,
+        "displacement_height": 0.03
+      },
+      "albedo_delta_rgb": [-10, -7, -8]
+    },
+    {
+      "name": "diffuse distal discoloration",
+      "center_normalized_xyz": [0.24, 0.08, 0.16],
+      "radius": 0.42,
+      "falloff": 1.55,
+      "regions": ["lobar_or_segmental_bronchus", "distal_airway"],
+      "edge_softness": 0.62,
+      "opacity": 0.58,
+      "texture_noise_strength": 0.18,
+      "texture_noise_scale": 2.6,
+      "channels": {
+        "stain": 0.09,
+        "roughness": 0.035,
+        "specular": -0.03,
+        "bump_height": 0.025,
+        "displacement_height": 0.015
+      },
+      "albedo_delta_rgb": [-5, -3, -4]
+    }
+  ]
+}

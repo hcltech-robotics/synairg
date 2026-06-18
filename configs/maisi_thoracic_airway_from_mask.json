@@ -1,0 +1,12 @@
+{
+  "_comment": "Thoracic-only MAISI-format source mask prepared by tools/generation/prepare_thoracic_airway_mask.py for issue 5 airway mesh generation.",
+  "mask_path": "../.codex_tmp/nv_generate_thoracic_frommask_run/thoracic_airway_source_mask.nii.gz",
+  "num_inference_steps": 30,
+  "cfg_guidance_scale": 0,
+  "autoencoder_sliding_window_infer_size": [
+    64,
+    64,
+    64
+  ],
+  "autoencoder_sliding_window_infer_overlap": 0.5
+}
