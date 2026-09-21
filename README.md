@@ -3,7 +3,8 @@
 <p align="center">
   <a href="https://huggingface.co/datasets/chrisvoncsefalvay/1000lungs"><img alt="Hugging Face dataset" src="https://img.shields.io/badge/Hugging%20Face-dataset-ffcc4d?logo=huggingface&amp;logoColor=black"></a>
   <a href="https://huggingface.co/spaces/chrisvoncsefalvay/1000lungs-dataset-viewer"><img alt="Hugging Face viewer" src="https://img.shields.io/badge/Hugging%20Face-viewer-ffcc4d?logo=huggingface&amp;logoColor=black"></a>
-  <a href="https://chrisvoncsefalvay.github.io/synairg"><img alt="Project page" src="https://img.shields.io/badge/project-page-2f6fdd"></a>
+  <a href="https://hcltech-robotics.github.io/synairg/"><img alt="Project page" src="https://img.shields.io/badge/project-page-2f6fdd"></a>
+  <a href="https://openreview.net/forum?id=hQ7X3AAlme"><img alt="Accepted at IROS 2026 SurgTwin" src="https://img.shields.io/badge/IROS%202026-SurgTwin-0f766e"></a>
 </p>
 
 `synairg` turns generated or imported thoracic CT into physiologically plausible
@@ -26,7 +27,7 @@ command for local debugging, cluster execution or RL workflow orchestration.
 Clone the repo, install the editable package and validate the bundled manifest:
 
 ```bash
-git clone git@github.com:chrisvoncsefalvay/synairg.git
+git clone git@github.com:hcltech-robotics/synairg.git
 cd synairg
 python -m venv .venv
 source .venv/bin/activate

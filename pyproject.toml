@@ -28,6 +28,12 @@ dependencies = [
   "typer>=0.12",
 ]
 
+[project.urls]
+Homepage = "https://hcltech-robotics.github.io/synairg/"
+Repository = "https://github.com/hcltech-robotics/synairg"
+Issues = "https://github.com/hcltech-robotics/synairg/issues"
+Paper = "https://openreview.net/forum?id=hQ7X3AAlme"
+
 [project.optional-dependencies]
 dev = [
   "mypy>=1.10",
