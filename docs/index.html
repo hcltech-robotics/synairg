@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SynAirG | HCLTech</title>
+  <meta name="description" content="SynAirG turns generated or imported thoracic CT into airway environments for bronchoscopy simulation, perception, SLAM and reinforcement learning. Accepted at IROS 2026 SurgTwin.">
+  <meta name="author" content="Chris von Csefalvay">
+  <link rel="canonical" href="https://hcltech-robotics.github.io/synairg/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="HCLTech">
+  <meta property="og:title" content="SynAirG: Generative Worlds for Adaptive Training of Bronchoscopy SLAM Models">
+  <meta property="og:description" content="From thoracic CT to reproducible airway environments. Accepted at IROS 2026 SurgTwin.">
+  <meta property="og:url" content="https://hcltech-robotics.github.io/synairg/">
+  <meta name="theme-color" content="#1b1f24">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/project.css">
+  <style>
+    .project-subtitle { max-width: 780px; margin: -0.5rem auto 1.75rem; font-size: clamp(1.35rem, 3vw, 1.8rem); line-height: 1.4; }
+    .pipeline-figure { margin: 0; }
+    .pipeline-figure img { display: block; width: 100%; height: auto; }
+    .pipeline-figure figcaption { font-size: 1rem; line-height: 1.7; color: var(--text-secondary); }
+    .content.has-text-justified { text-align: left !important; }
+    .content li { margin-bottom: 0.7rem; }
+    pre { overflow-wrap: anywhere; }
+    .skip-link { position: absolute; top: -5rem; left: 1rem; z-index: 10; background: white; padding: 1rem; }
+    .skip-link:focus { top: 1rem; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .hero, .section { animation: none; } * { transition: none !important; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#overview">Skip to content</a>
+  <main id="main-content">
+    <section class="hero publication-header">
+      <div class="hero-body"><div class="container is-max-desktop has-text-centered">
+        <p class="project-eyebrow">Accepted at IROS 2026 · SurgTwin</p>
+        <h1 class="title is-1 publication-title">SynAirG</h1>
+        <p class="project-subtitle">Generative Worlds for Adaptive Training of Bronchoscopy SLAM Models</p>
+        <div class="is-size-5 publication-authors"><span class="author-block">Chris von Csefalvay<sup>1</sup></span></div>
+        <div class="project-author-website"><a href="https://chrisvoncsefalvay.com">chrisvoncsefalvay.com</a></div>
+        <div class="is-size-5 publication-authors"><span class="author-block affiliation-block"><sup>1</sup> HCLTech</span></div>
+        <nav class="publication-links" aria-label="Project resources">
+          <span class="link-block"><a class="button is-normal is-rounded is-dark" href="https://openreview.net/forum?id=hQ7X3AAlme">Paper · IROS 2026 SurgTwin</a></span>
+          <span class="link-block"><a class="button is-normal is-rounded is-dark" href="https://github.com/hcltech-robotics/synairg">Code</a></span>
+          <span class="link-block"><a class="button is-normal is-rounded is-dark" href="https://huggingface.co/datasets/chrisvoncsefalvay/1000lungs">Dataset</a></span>
+          <span class="link-block"><a class="button is-normal is-rounded is-dark" href="https://huggingface.co/spaces/chrisvoncsefalvay/1000lungs-dataset-viewer">Dataset viewer</a></span>
+        </nav>
+      </div></div>
+    </section>
+    <section class="hero teaser" aria-label="Pipeline illustration">
+      <div class="container is-max-desktop"><div class="hero-body">
+        <figure class="pipeline-figure">
+          <img src="assets/synairg-pipeline.png" alt="SynAirG pipeline from CT volume to airway mesh, labelled scope frames and rendering assets">
+          <figcaption class="has-text-centered teaser-caption">From thoracic CT to bronchoscopy-ready geometry, scope trajectories and aligned rendering outputs.</figcaption>
+        </figure>
+      </div></div>
+    </section>
+    <section id="overview" class="section hero is-light">
+      <div class="container is-max-desktop"><div class="columns is-centered"><div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Overview</h2>
+        <div class="content has-text-justified">
+          <p>SynAirG turns generated or imported thoracic CT into physiologically plausible airway environments for bronchoscopy simulation, perception, simultaneous localisation and mapping (SLAM), and reinforcement learning. It connects airway anatomy, scope motion and rendered appearance in a single reproducible workflow.</p>
+          <p>Each case is defined by a YAML or JSON manifest. The same case can produce airway meshes, centreline graphs, camera trajectories, video, aligned condition frames and physically based rendering assets, while preserving its CT, mask and pose provenance.</p>
+        </div>
+      </div></div></div>
+    </section>
+    <section class="section">
+      <div class="container is-max-desktop"><div class="columns is-centered"><div class="column is-four-fifths">
+        <h2 class="title is-3">From scan to simulation</h2>
+        <div class="content">
+          <ol>
+            <li><strong>Generate or import anatomy.</strong> Start with MAISI-generated CT, mask-conditioned generation, local NIfTI or DICOM, or a TCIA series. Obtain the airway mask from generated labels, a supplied mask, MONAI or an external segmenter.</li>
+            <li><strong>Build and check the airway.</strong> Repair topology, filter branches by bronchoscope accessibility, extract the centreline and export OBJ, PLY or USD geometry with quality reports and registration metadata.</li>
+            <li><strong>Sample scope motion.</strong> Generate distal target paths or procedure-style insertion trajectories, with per-frame camera poses and intrinsics.</li>
+            <li><strong>Render aligned observations.</strong> Export RGB, metric depth, surface normals, per-pixel shading and airway masks. Use anatomy-aware mucosal materials and USD/MDL bundles for final Omniverse RTX rendering.</li>
+          </ol>
+        </div>
+      </div></div></div>
+    </section>
+    <section class="section hero is-light">
+      <div class="container is-max-desktop"><div class="columns is-centered"><div class="column is-four-fifths">
+        <h2 class="title is-3">Controlled variation for learning</h2>
+        <div class="content">
+          <p>Reuse an airway across different trajectories, camera cadences, lighting conditions and mucosal appearances. Material maps control wetness, roughness, secretions, erythema, blood and surface detail, including variation across anatomical regions.</p>
+          <p>The manifest records physiological bounds and domain-randomisation settings for an external reinforcement-learning launcher. Geometry, topology, pose and CT provenance stay linked as appearance changes, supporting reproducible training and evaluation environments.</p>
+        </div>
+      </div></div></div>
+    </section>
+    <section class="section">
+      <div class="container is-max-desktop"><div class="columns is-centered"><div class="column is-four-fifths">
+        <h2 class="title is-3">Get started</h2>
+        <div class="content">
+          <p>Install with Python 3.10 or newer, then validate and inspect the bundled pipeline manifest.</p>
+          <pre><code>git clone https://github.com/hcltech-robotics/synairg.git
+cd synairg
+python -m venv .venv
+source .venv/bin/activate
+python -m pip install -e ".[dev]"
+synairg pipeline validate --manifest configs/synairg_pipeline.yml
+synairg pipeline plan --manifest configs/synairg_pipeline.yml --shell</code></pre>
+          <p>Generation, segmentation and RTX rendering use their respective external backends. See the <a href="https://github.com/hcltech-robotics/synairg#readme">README</a> for installation, stage-by-stage commands and environment deployment.</p>
+        </div>
+      </div></div></div>
+    </section>
+    <section class="section hero is-light">
+      <div class="container is-max-desktop"><div class="columns is-centered"><div class="column is-four-fifths">
+        <h2 class="title is-3">Paper and licence</h2>
+        <div class="content">
+          <p><em>SynAirG: Generative Worlds for Adaptive Training of Bronchoscopy SLAM Models</em> has been accepted at IROS 2026 SurgTwin. <a href="https://openreview.net/forum?id=hQ7X3AAlme">Read the paper on OpenReview.</a></p>
+          <p>Code is licensed under <a href="https://github.com/hcltech-robotics/synairg/blob/main/LICENSE">Apache-2.0</a>. Weights and weight-derived artefacts are licensed under OpenMDW 1.1.</p>
+        </div>
+      </div></div></div>
+    </section>
+  </main>
+  <footer class="footer"><div class="container is-max-desktop"><div class="content has-text-centered">
+    <p>Built with the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template">Academic Project Page Template</a>, adapted from the <a href="https://nerfies.github.io/">Nerfies</a> project page.</p>
+  </div></div></footer>
+</body>
+</html>
