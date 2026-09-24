@@ -22,6 +22,23 @@ command for local debugging, cluster execution or RL workflow orchestration.
   <img src="docs/assets/synairg-pipeline.png" alt="synairg pipeline from CT volume to airway mesh, labelled scope frames and rendering assets" width="820">
 </p>
 
+## Paper
+
+[Geometry-First Generative Worlds as Simulation Substrates in Bronchoscopy](https://hcltech-robotics.github.io/synairg/paper.html)
+Chris von Csefalvay, Pranav Doma and Tamas Foldi · HCLTech
+Accepted at IROS 2026 SurgTwin.
+
+[PDF](https://hcltech-robotics.github.io/synairg/synairg-paper.pdf) ·
+[BibTeX](docs/synairg-paper.bib) · [LaTeX source and build instructions](paper/) ·
+[OpenReview](https://openreview.net/forum?id=hQ7X3AAlme)
+
+The paper includes the corpus-level audit that found anatomical mode collapse
+caused by upstream cache reuse. The figures and measurements supplied with the
+manuscript are retained in the source archive.
+
+The **1000lungs dataset** DOI is [10.57967/hf/9209](https://doi.org/10.57967/hf/9209).
+This identifier belongs to the dataset; no DOI is asserted for the paper.
+
 ## Quick start
 
 Clone the repo, install the editable package and validate the bundled manifest:

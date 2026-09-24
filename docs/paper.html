@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Geometry-First Generative Worlds as Simulation Substrates in Bronchoscopy</title>
+  <meta name="description" content="The SynAirG paper: a geometry-first pipeline from chest CT to metric bronchoscopy worlds, with exact pose supervision and a corpus-level quality audit.">
+  <meta name="author" content="Chris von Csefalvay, Pranav Doma, Tamas Foldi">
+  <link rel="canonical" href="https://hcltech-robotics.github.io/synairg/paper.html">
+  <meta name="citation_title" content="Geometry-First Generative Worlds as Simulation Substrates in Bronchoscopy">
+  <meta name="citation_author" content="Chris von Csefalvay">
+  <meta name="citation_author" content="Pranav Doma">
+  <meta name="citation_author" content="Tamas Foldi">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_conference_title" content="IROS 2026 SurgTwin Workshop">
+  <meta name="citation_pdf_url" content="https://hcltech-robotics.github.io/synairg/synairg-paper.pdf">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="SynAirG">
+  <meta property="og:title" content="Geometry-First Generative Worlds as Simulation Substrates in Bronchoscopy">
+  <meta property="og:description" content="The SynAirG paper by Chris von Csefalvay, Pranav Doma and Tamas Foldi. Accepted at IROS 2026 SurgTwin.">
+  <meta property="og:url" content="https://hcltech-robotics.github.io/synairg/paper.html">
+  <meta property="og:image" content="https://hcltech-robotics.github.io/synairg/assets/synairg-pipeline.png">
+  <meta property="og:image:alt" content="SynAirG pipeline from thoracic CT to bronchoscopy simulation assets">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Geometry-First Generative Worlds as Simulation Substrates in Bronchoscopy">
+  <meta name="twitter:description" content="Geometry-first generation for bronchoscopy simulation. Read the paper and download the manuscript source.">
+  <meta name="twitter:image" content="https://hcltech-robotics.github.io/synairg/assets/synairg-pipeline.png">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/project.css">
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://hcltech-robotics.github.io/synairg/paper.html#webpage",
+      "url": "https://hcltech-robotics.github.io/synairg/paper.html",
+      "name": "Geometry-First Generative Worlds as Simulation Substrates in Bronchoscopy",
+      "inLanguage": "en",
+      "mainEntity": {
+        "@id": "https://hcltech-robotics.github.io/synairg/paper.html#article"
+      },
+      "breadcrumb": {
+        "@id": "https://hcltech-robotics.github.io/synairg/paper.html#breadcrumbs"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://hcltech-robotics.github.io/synairg/paper.html#article",
+      "url": "https://hcltech-robotics.github.io/synairg/paper.html",
+      "name": "Geometry-First Generative Worlds as Simulation Substrates in Bronchoscopy",
+      "headline": "Geometry-First Generative Worlds as Simulation Substrates in Bronchoscopy",
+      "abstract": "The limiting factor for endoluminal robotics in bronchoscopic approaches is not algorithms but supervision – essentially, a data problem: recordings are scarce, privacy-encumbered and rarely carry ground truth for pose nor depth. We describe SynAirG, a manifest-driven procedural pipeline that turns chest CTs into navigable, metric bronchoscopy worlds. In the generative setting, procedurally synthesised volumes are reduced to quality-assured airway meshes and centreline graphs, procedure-style scope trajectories are sampled, and frame-aligned depth, surface normals and per-pixel shading streams are rendered with exact pose. All of this is packaged in the LeRobot and TUM trajectory formats, ready for SLAM training or other downstream applications. We validate the methodology on a large set of synthetic cases, characterising anatomical and kinematic spread. We then report pitfalls with equal candour, including how corpus-level fingerprinting of the full release exposed silent anatomical mode collapse caused by cache reuse upstream of otherwise-passing per-case quality gates, and we outline two unaddressed realism gaps, conditional neural appearance for mucosal pathology and prescribed respiratory deformation, with concrete pathways for both. Geometry-first generation reconciles the desire for realism with the need for customisability and cross-temporal stability.",
+      "inLanguage": "en",
+      "author": [
+        {
+          "@id": "https://hcltech-robotics.github.io/synairg/#chris-von-csefalvay"
+        },
+        {
+          "@id": "https://hcltech-robotics.github.io/synairg/#pranav-doma"
+        },
+        {
+          "@id": "https://hcltech-robotics.github.io/synairg/#tamas-foldi"
+        }
+      ],
+      "mainEntityOfPage": {
+        "@id": "https://hcltech-robotics.github.io/synairg/paper.html#webpage"
+      },
+      "about": {
+        "@id": "https://hcltech-robotics.github.io/synairg/#software"
+      },
+      "isPartOf": {
+        "@type": "CreativeWork",
+        "name": "IROS 2026 SurgTwin Workshop",
+        "url": "https://utkauraslab.github.io/surgtwin-workshop.github.io/"
+      },
+      "sameAs": "https://openreview.net/forum?id=hQ7X3AAlme",
+      "encoding": {
+        "@type": "MediaObject",
+        "contentUrl": "https://hcltech-robotics.github.io/synairg/synairg-paper.pdf",
+        "encodingFormat": "application/pdf"
+      },
+      "isAccessibleForFree": true,
+      "citation": {
+        "@id": "https://doi.org/10.57967/hf/9209"
+      }
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://hcltech-robotics.github.io/synairg/#software",
+      "name": "SynAirG",
+      "codeRepository": "https://github.com/hcltech-robotics/synairg",
+      "url": "https://hcltech-robotics.github.io/synairg/"
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://doi.org/10.57967/hf/9209",
+      "name": "1000lungs",
+      "url": "https://huggingface.co/datasets/chrisvoncsefalvay/1000lungs",
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "DOI",
+        "value": "10.57967/hf/9209"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://hcltech-robotics.github.io/synairg/#chris-von-csefalvay",
+      "name": "Chris von Csefalvay",
+      "affiliation": {
+        "@id": "https://hcltech-robotics.github.io/synairg/#hcltech"
+      },
+      "url": "https://chrisvoncsefalvay.com",
+      "email": "kristof.csefalvay@hcltech.com"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://hcltech-robotics.github.io/synairg/#pranav-doma",
+      "name": "Pranav Doma",
+      "affiliation": {
+        "@id": "https://hcltech-robotics.github.io/synairg/#hcltech"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://hcltech-robotics.github.io/synairg/#tamas-foldi",
+      "name": "Tamas Foldi",
+      "affiliation": {
+        "@id": "https://hcltech-robotics.github.io/synairg/#hcltech"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://hcltech-robotics.github.io/synairg/#hcltech",
+      "name": "HCLTech",
+      "url": "https://www.hcltech.com/"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://hcltech-robotics.github.io/synairg/paper.html#breadcrumbs",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SynAirG",
+          "item": "https://hcltech-robotics.github.io/synairg/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Paper",
+          "item": "https://hcltech-robotics.github.io/synairg/paper.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+  <style>
+    .paper-layout { max-width: 960px; padding: 1.5rem; margin: 0 auto; }
+    .paper-header { margin-bottom: 1.5rem; }
+    .paper-title { font-size: clamp(1.8rem, 3.5vw, 2.65rem) !important; line-height: 1.2 !important; font-weight: 800; margin: 0 0 1rem; white-space: normal; overflow: visible; overflow-wrap: break-word; }
+    .paper-authors { margin-bottom: 0.35rem; font-size: 1.1rem; }
+    .paper-contact { margin: 0.35rem 0 1rem; overflow-wrap: anywhere; }
+    .paper-layout .breadcrumb { margin-bottom: 1.25rem; }
+    .paper-layout .project-eyebrow { font-size: 0.95rem; margin-bottom: 0.75rem; }
+    .paper-section { margin-top: 1.75rem; }
+    .paper-section h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.75rem; }
+    .paper-abstract { text-align: left; }
+    .paper-layout .publication-links { display: flex; gap: 0.65rem; flex-wrap: wrap; margin: 1.25rem 0; }
+    .paper-layout .publication-links .button { margin: 0; }
+    .paper-layout pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+    .skip-link { position: absolute; top: -5rem; left: 1rem; z-index: 10; background: white; padding: 1rem; }
+    .skip-link:focus { top: 1rem; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition: none !important; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#abstract">Skip to abstract</a>
+  <main class="paper-layout">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <ul><li><a href="./">SynAirG</a></li><li class="is-active"><a href="paper.html" aria-current="page">Paper</a></li></ul>
+    </nav>
+    <header class="paper-header">
+      <p class="project-eyebrow">Accepted at IROS 2026 · SurgTwin</p>
+      <h1 class="paper-title">Geometry-First Generative Worlds as Simulation Substrates in Bronchoscopy</h1>
+      <p class="paper-authors"><a href="https://chrisvoncsefalvay.com">Chris von Csefalvay</a>, Pranav Doma and Tamas Foldi</p>
+      <p>HCLTech</p>
+      <p class="paper-contact">Corresponding author: <a href="mailto:kristof.csefalvay@hcltech.com">kristof.csefalvay@hcltech.com</a></p>
+    </header>
+    <section id="abstract" class="paper-section" aria-labelledby="abstract-heading">
+      <h2 id="abstract-heading">Abstract</h2>
+      <div class="content paper-abstract"><p>The limiting factor for endoluminal robotics in bronchoscopic approaches is not algorithms but supervision – essentially, a data problem: recordings are scarce, privacy-encumbered and rarely carry ground truth for pose nor depth. We describe SynAirG, a manifest-driven procedural pipeline that turns chest CTs into navigable, metric bronchoscopy worlds. In the generative setting, procedurally synthesised volumes are reduced to quality-assured airway meshes and centreline graphs, procedure-style scope trajectories are sampled, and frame-aligned depth, surface normals and per-pixel shading streams are rendered with exact pose. All of this is packaged in the LeRobot and TUM trajectory formats, ready for SLAM training or other downstream applications. We validate the methodology on a large set of synthetic cases, characterising anatomical and kinematic spread. We then report pitfalls with equal candour, including how corpus-level fingerprinting of the full release exposed silent anatomical mode collapse caused by cache reuse upstream of otherwise-passing per-case quality gates, and we outline two unaddressed realism gaps, conditional neural appearance for mucosal pathology and prescribed respiratory deformation, with concrete pathways for both. Geometry-first generation reconciles the desire for realism with the need for customisability and cross-temporal stability.</p></div>
+    </section>
+    <nav class="publication-links" aria-label="Paper resources">
+      <a class="button is-rounded is-dark" href="synairg-paper.pdf" type="application/pdf">Read the paper (PDF)</a>
+      <a class="button is-rounded is-dark" href="https://github.com/hcltech-robotics/synairg/tree/main/paper">Manuscript source</a>
+      <a class="button is-rounded is-dark" href="synairg-paper.bib" download>Download BibTeX</a>
+    </nav>
+    <section class="paper-section" aria-labelledby="publication-heading">
+      <h2 id="publication-heading">Publication and data</h2>
+      <div class="content">
+        <p>Accepted at the IROS 2026 SurgTwin workshop. The <a href="https://openreview.net/forum?id=hQ7X3AAlme">OpenReview submission record</a> and <a href="https://utkauraslab.github.io/surgtwin-workshop.github.io/">workshop accepted-paper listing</a> provide the submission and acceptance records. The PDF and source linked here include the full author list.</p>
+        <p>The paper describes the <a href="https://doi.org/10.57967/hf/9209">1000lungs dataset (dataset DOI: 10.57967/hf/9209)</a>. This identifier refers to the dataset; no DOI is listed for this manuscript. Browse the <a href="https://huggingface.co/datasets/chrisvoncsefalvay/1000lungs">dataset files</a> or the <a href="https://huggingface.co/spaces/chrisvoncsefalvay/1000lungs-dataset-viewer">dataset viewer</a>.</p>
+      </div>
+    </section>
+    <section id="citation" class="paper-section" aria-labelledby="citation-heading">
+      <h2 id="citation-heading">Cite this paper</h2>
+      <pre><code>@inproceedings{voncsefalvay2026synairg,
+  title     = {Geometry-First Generative Worlds as Simulation Substrates in Bronchoscopy},
+  author    = {von Csefalvay, Chris and Doma, Pranav and Foldi, Tamas},
+  booktitle = {IROS 2026 SurgTwin Workshop},
+  year      = {2026},
+  url       = {https://hcltech-robotics.github.io/synairg/paper.html},
+  note      = {Accepted workshop paper}
+}</code></pre>
+    </section>
+  </main>
+  <footer class="footer"><div class="container is-max-desktop"><div class="content has-text-centered"><p><a href="./">SynAirG project</a> · <a href="https://github.com/hcltech-robotics/synairg">Source repository</a></p></div></div></footer>
+</body>
+</html>
