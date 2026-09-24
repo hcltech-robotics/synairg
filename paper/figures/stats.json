@@ -1,0 +1,85 @@
+{
+ "generated_at": "2026-08-15T16:49:48Z",
+ "repo": "chrisvoncsefalvay/1000lungs",
+ "episodes": 1000,
+ "cases_sampled": 33,
+ "parquet_sampled": 33,
+ "fps": 20.0,
+ "frames_total": 1769286,
+ "hours_total": 24.573416666666667,
+ "duration_s": {
+  "median": 91.4,
+  "p05": 60.95,
+  "p95": 103.1
+ },
+ "quality_gates": {
+  "min_airway_voxels": 50000,
+  "min_centerline_nodes": 100,
+  "min_mesh_vertices": 30000,
+  "min_procedure_frames": 1000,
+  "min_procedure_length_mm": 450.0,
+  "require_expected_mesh_opening": true
+ },
+ "failures_logged": 1,
+ "checks_all_pass_rate": 1.0,
+ "medians": {
+  "branch_count": 170.0,
+  "max_generation": 17.0,
+  "terminal_nodes": 87.0,
+  "centerline_mm": 2377.825880627099,
+  "airway_ml": 45.85365651254958,
+  "path_mm": 742.734,
+  "min_lumen_mm": 3.341,
+  "radius_p50_mm": 1.0627358197752859,
+  "phases": 12.0,
+  "speed_med_mm_s": 8.13483715057373,
+  "ang_med_deg_s": 3.5387728214263916,
+  "insertion_max_mm": 233.7899932861328,
+  "retraction_frac": 0.5079365079365079
+ },
+ "characterisation": {
+  "branch": {
+   "median": 170.0,
+   "p05": 118.0,
+   "p95": 352.2
+  },
+  "centerline_mm": {
+   "median": 2377.825880627099,
+   "p05": 1683.9216821600075,
+   "p95": 4685.881343457192
+  },
+  "path_mm": {
+   "median": 742.734,
+   "p05": 464.46139999999997,
+   "p95": 844.8134
+  },
+  "speed_mm_s": {
+   "median": 8.13483715057373,
+   "p05": 7.00103988647461,
+   "p95": 8.81207218170166
+  },
+  "figure": "figures/fig_characterisation.pdf"
+ },
+ "audit": {
+  "unique_worlds": 56,
+  "duplicate_episodes": 941,
+  "max_multiplicity": 29,
+  "figure": "figures/fig_audit.pdf"
+ },
+ "distinct_first": 50,
+ "montage_episodes": [
+  38,
+  3,
+  27,
+  11,
+  15,
+  42,
+  30,
+  35,
+  18,
+  16,
+  39
+ ],
+ "montage": "figures/fig_montage.png",
+ "bytes_fetched_mb": 6.2
+}

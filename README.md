@@ -4,7 +4,7 @@
   <a href="https://huggingface.co/datasets/chrisvoncsefalvay/1000lungs"><img alt="Hugging Face dataset" src="https://img.shields.io/badge/Hugging%20Face-dataset-ffcc4d?logo=huggingface&amp;logoColor=black"></a>
   <a href="https://huggingface.co/spaces/chrisvoncsefalvay/1000lungs-dataset-viewer"><img alt="Hugging Face viewer" src="https://img.shields.io/badge/Hugging%20Face-viewer-ffcc4d?logo=huggingface&amp;logoColor=black"></a>
   <a href="https://hcltech-robotics.github.io/synairg/"><img alt="Project page" src="https://img.shields.io/badge/project-page-2f6fdd"></a>
-  <a href="https://openreview.net/forum?id=hQ7X3AAlme"><img alt="Accepted at IROS 2026 SurgTwin" src="https://img.shields.io/badge/IROS%202026-SurgTwin-0f766e"></a>
+  <img alt="IROS 2026 Spotlight" src="https://img.shields.io/badge/IROS%202026-Spotlight-0f766e">
 </p>
 
 `synairg` turns generated or imported thoracic CT into physiologically plausible
@@ -21,6 +21,23 @@ command for local debugging, cluster execution or RL workflow orchestration.
 <p align="center">
   <img src="docs/assets/synairg-pipeline.png" alt="synairg pipeline from CT volume to airway mesh, labelled scope frames and rendering assets" width="820">
 </p>
+
+## Paper
+
+Geometry-First Generative Worlds as Simulation Substrates in Bronchoscopy
+Chris von Csefalvay, Pranav Doma and Tamas Foldi · HCLTech
+IROS 2026 Spotlight.
+
+[PDF](https://hcltech-robotics.github.io/synairg/synairg-paper.pdf) ·
+[BibTeX](docs/synairg-paper.bib) · [LaTeX source and build instructions](paper/) ·
+[OpenReview](https://openreview.net/forum?id=hQ7X3AAlme)
+
+The paper includes the corpus-level audit that found anatomical mode collapse
+caused by upstream cache reuse. The figures and measurements supplied with the
+manuscript are retained in the source archive.
+
+The **1000lungs dataset** DOI is [10.57967/hf/9209](https://doi.org/10.57967/hf/9209).
+This identifier belongs to the dataset; no DOI is asserted for the paper.
 
 ## Quick start
 

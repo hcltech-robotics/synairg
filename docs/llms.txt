@@ -1,0 +1,27 @@
+# SynAirG
+
+> SynAirG is a manifest-driven Python pipeline for synthetic airway generation and bronchoscopy simulation. It turns generated or imported thoracic CT into airway geometry, camera trajectories and aligned rendering outputs.
+
+The paper is by Chris von Csefalvay, Pranav Doma and Tamas Foldi at HCLTech. Its application areas include bronchoscopy perception, simultaneous localisation and mapping (SLAM), and preparation of simulation assets for learning workflows.
+
+Each case uses a YAML or JSON manifest to connect CT and mask provenance, airway meshes, centreline graphs, camera poses and rendering outputs. Rendering outputs include RGB, metric depth, surface normals, per-pixel shading and airway masks. Generation, segmentation and RTX rendering require their respective external backends.
+
+The code licence is Apache-2.0. Weights and weight-derived artefacts use OpenMDW 1.1. Consult the linked sources for their scope and current terms.
+
+## Project and documentation
+
+- [Project page](https://hcltech-robotics.github.io/synairg/): Overview, authors, resource links and citation.
+- [Source repository](https://github.com/hcltech-robotics/synairg): Python source, configurations, tests and tools.
+- [README](https://github.com/hcltech-robotics/synairg/blob/main/README.md): Installation, pipeline stages, input routes and usage examples.
+- [Example manifest](https://github.com/hcltech-robotics/synairg/blob/main/configs/synairg_pipeline.yml): Case configuration and pipeline contract.
+
+## Paper and data
+
+- [Paper PDF](https://hcltech-robotics.github.io/synairg/synairg-paper.pdf): Public manuscript with restored authors and verified reference links.
+- [Manuscript source](https://github.com/hcltech-robotics/synairg/tree/main/paper): LaTeX, original figures, bibliography and build instructions.
+- [Dataset DOI](https://doi.org/10.57967/hf/9209): Persistent identifier for 1000lungs; not a DOI for the manuscript.
+
+- [Workshop paper record](https://openreview.net/forum?id=hQ7X3AAlme): IROS 2026 SurgTwin submission record.
+- [SurgTwin workshop](https://utkauraslab.github.io/surgtwin-workshop.github.io/): Workshop programme and accepted-paper listing.
+- [1000lungs dataset](https://huggingface.co/datasets/chrisvoncsefalvay/1000lungs): Dataset files and accompanying documentation.
+- [Dataset viewer](https://huggingface.co/spaces/chrisvoncsefalvay/1000lungs-dataset-viewer): Interactive inspection of dataset outputs.

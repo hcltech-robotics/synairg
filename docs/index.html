@@ -3,15 +3,81 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SynAirG</title>
-  <meta name="description" content="SynAirG turns generated or imported thoracic CT into airway environments for bronchoscopy simulation, perception, SLAM and reinforcement learning. Accepted at IROS 2026 SurgTwin.">
+  <title>SynAirG | Synthetic airway generation for bronchoscopy SLAM</title>
+  <meta name="description" content="SynAirG turns generated or imported thoracic CT into airway environments for bronchoscopy simulation, perception, SLAM and reinforcement learning. IROS 2026 Spotlight.">
   <meta name="author" content="Chris von Csefalvay, Pranav Doma, Tamas Foldi">
   <link rel="canonical" href="https://hcltech-robotics.github.io/synairg/">
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="website">
   <meta property="og:site_name" content="SynAirG">
-  <meta property="og:title" content="SynAirG: Generative Worlds for Adaptive Training of Bronchoscopy SLAM Models">
-  <meta property="og:description" content="From thoracic CT to reproducible airway environments. Accepted at IROS 2026 SurgTwin.">
+  <meta property="og:title" content="SynAirG | Synthetic airway generation for bronchoscopy SLAM">
+  <meta property="og:description" content="From thoracic CT to reproducible airway environments. IROS 2026 Spotlight.">
   <meta property="og:url" content="https://hcltech-robotics.github.io/synairg/">
+  <meta property="og:image" content="https://hcltech-robotics.github.io/synairg/assets/synairg-pipeline.png">
+  <meta property="og:image:alt" content="SynAirG pipeline from thoracic CT to airway geometry, camera trajectories and aligned rendering outputs">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SynAirG | Synthetic airway generation for bronchoscopy SLAM">
+  <meta name="twitter:description" content="A manifest-driven pipeline from thoracic CT to airway geometry, camera trajectories and aligned rendering outputs. IROS 2026 Spotlight.">
+  <meta name="twitter:image" content="https://hcltech-robotics.github.io/synairg/assets/synairg-pipeline.png">
+  <meta name="twitter:image:alt" content="SynAirG pipeline from thoracic CT to bronchoscopy simulation assets">
+  <link rel="sitemap" type="application/xml" href="sitemap.xml">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://hcltech-robotics.github.io/synairg/#webpage",
+        "url": "https://hcltech-robotics.github.io/synairg/",
+        "name": "SynAirG | Synthetic airway generation for bronchoscopy SLAM",
+        "description": "SynAirG turns generated or imported thoracic CT into airway environments for bronchoscopy simulation, perception, SLAM and reinforcement learning.",
+        "inLanguage": "en",
+        "mainEntity": {"@id": "https://hcltech-robotics.github.io/synairg/#software"},
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://hcltech-robotics.github.io/synairg/assets/synairg-pipeline.png",
+          "width": 1280,
+          "height": 291
+        }
+      },
+      {
+        "@type": "SoftwareSourceCode",
+        "@id": "https://hcltech-robotics.github.io/synairg/#software",
+        "name": "SynAirG",
+        "description": "A manifest-driven Python pipeline from generated or imported thoracic CT to airway meshes, centreline graphs, camera trajectories and aligned rendering outputs.",
+        "url": "https://hcltech-robotics.github.io/synairg/",
+        "codeRepository": "https://github.com/hcltech-robotics/synairg",
+        "programmingLanguage": "Python",
+        "license": "https://github.com/hcltech-robotics/synairg/blob/main/LICENSE",
+        "keywords": ["bronchoscopy", "synthetic airway generation", "SLAM", "thoracic CT", "surgical simulation"]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://hcltech-robotics.github.io/synairg/#chris-von-csefalvay",
+        "name": "Chris von Csefalvay",
+        "url": "https://chrisvoncsefalvay.com",
+        "affiliation": {"@id": "https://hcltech-robotics.github.io/synairg/#hcltech"}
+      },
+      {
+        "@type": "Person",
+        "@id": "https://hcltech-robotics.github.io/synairg/#pranav-doma",
+        "name": "Pranav Doma",
+        "affiliation": {"@id": "https://hcltech-robotics.github.io/synairg/#hcltech"}
+      },
+      {
+        "@type": "Person",
+        "@id": "https://hcltech-robotics.github.io/synairg/#tamas-foldi",
+        "name": "Tamas Foldi",
+        "affiliation": {"@id": "https://hcltech-robotics.github.io/synairg/#hcltech"}
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://hcltech-robotics.github.io/synairg/#hcltech",
+        "name": "HCLTech",
+        "url": "https://www.hcltech.com/"
+      }
+    ]
+  }
+  </script>
   <meta name="theme-color" content="#1b1f24">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,7 +104,7 @@
   <main id="main-content">
     <section class="hero publication-header">
       <div class="hero-body"><div class="container is-max-desktop has-text-centered">
-        <p class="project-eyebrow">Accepted at IROS 2026 · SurgTwin</p>
+        <p class="project-eyebrow">IROS 2026 Spotlight</p>
         <h1 class="title is-1 publication-title">SynAirG</h1>
         <p class="project-subtitle">Generative Worlds for Adaptive Training of Bronchoscopy SLAM Models</p>
         <div class="is-size-5 publication-authors">
@@ -49,7 +115,7 @@
         <div class="is-size-5 publication-authors"><span class="author-block affiliation-block"><sup>1</sup> HCLTech</span></div>
         <div class="project-author-website">* Corresponding author: <a href="mailto:kristof.csefalvay@hcltech.com">kristof.csefalvay@hcltech.com</a></div>
         <nav class="publication-links" aria-label="Project resources">
-          <span class="link-block"><a class="button is-normal is-rounded is-dark" href="https://openreview.net/forum?id=hQ7X3AAlme">Paper · IROS 2026 SurgTwin</a></span>
+          <span class="link-block"><a class="button is-normal is-rounded is-dark" aria-disabled="true">Paper</a></span>
           <span class="link-block"><a class="button is-normal is-rounded is-dark" href="https://github.com/hcltech-robotics/synairg">Code</a></span>
           <span class="link-block"><a class="button is-normal is-rounded is-dark" href="https://huggingface.co/datasets/chrisvoncsefalvay/1000lungs">Dataset</a></span>
           <span class="link-block"><a class="button is-normal is-rounded is-dark" href="https://huggingface.co/spaces/chrisvoncsefalvay/1000lungs-dataset-viewer">Dataset viewer</a></span>
@@ -59,7 +125,7 @@
     <section class="hero teaser" aria-label="Pipeline illustration">
       <div class="container is-max-desktop"><div class="hero-body">
         <figure class="pipeline-figure">
-          <img src="assets/synairg-pipeline.png" alt="SynAirG pipeline from CT volume to airway mesh, labelled scope frames and rendering assets">
+          <img src="assets/synairg-pipeline.png" width="1280" height="291" alt="SynAirG pipeline from CT volume to airway mesh, labelled scope frames and rendering assets">
           <figcaption class="has-text-centered teaser-caption">From thoracic CT to bronchoscopy-ready geometry, scope trajectories and aligned rendering outputs.</figcaption>
         </figure>
       </div></div>
@@ -111,24 +177,16 @@ synairg pipeline plan --manifest configs/synairg_pipeline.yml --shell</code></pr
         </div>
       </div></div></div>
     </section>
-    <section class="section hero is-light">
-      <div class="container is-max-desktop"><div class="columns is-centered"><div class="column is-four-fifths">
-        <h2 class="title is-3">Paper and licence</h2>
-        <div class="content">
-          <p><em>SynAirG: Generative Worlds for Adaptive Training of Bronchoscopy SLAM Models</em> has been accepted at IROS 2026 SurgTwin. <a href="https://openreview.net/forum?id=hQ7X3AAlme">Read the paper on OpenReview.</a></p>
-          <p>Code is licensed under <a href="https://github.com/hcltech-robotics/synairg/blob/main/LICENSE">Apache-2.0</a>. Weights and weight-derived artefacts are licensed under OpenMDW 1.1.</p>
-        </div>
-      </div></div></div>
-    </section>
     <section id="citation" class="section">
       <div class="container is-max-desktop"><div class="columns is-centered"><div class="column is-four-fifths">
         <h2 class="title is-3">BibTeX</h2>
+        <p><a href="synairg-paper.bib">Download BibTeX</a></p>
         <pre><code>@inproceedings{voncsefalvay2026synairg,
-  title     = {{SynAirG}: Generative Worlds for Adaptive Training of Bronchoscopy {SLAM} Models},
+  title     = {Geometry-First Generative Worlds as Simulation Substrates in Bronchoscopy},
   author    = {von Csefalvay, Chris and Doma, Pranav and Foldi, Tamas},
   booktitle = {IROS 2026 SurgTwin Workshop},
   year      = {2026},
-  url       = {https://openreview.net/forum?id=hQ7X3AAlme}
+  note      = {IROS 2026 Spotlight}
 }</code></pre>
       </div></div></div>
     </section>

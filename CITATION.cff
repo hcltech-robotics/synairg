@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: If you use SynAirG in your research, please cite the paper in preferred-citation.
+type: software
+title: SynAirG
+authors:
+- family-names: von Csefalvay
+  given-names: Chris
+repository-code: https://github.com/hcltech-robotics/synairg
+url: https://hcltech-robotics.github.io/synairg/
+license: Apache-2.0
+preferred-citation:
+  type: conference-paper
+  title: Geometry-First Generative Worlds as Simulation Substrates in Bronchoscopy
+  authors:
+  - family-names: von Csefalvay
+    given-names: Chris
+    affiliation: HCLTech
+  - family-names: Doma
+    given-names: Pranav
+    affiliation: HCLTech
+  - family-names: Foldi
+    given-names: Tamas
+    affiliation: HCLTech
+  year: 2026
+  conference:
+    name: IROS 2026 SurgTwin Workshop
+  collection-title: IROS 2026 SurgTwin Workshop
+  notes: IROS 2026 Spotlight

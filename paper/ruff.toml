@@ -1,0 +1,3 @@
+# Author-supplied analysis scripts are preserved byte-for-byte as provenance.
+# Maintained package code remains covered by the repository lint configuration.
+extend-exclude = ["spark_stats.py", "make_3d_and_montage.py"]
